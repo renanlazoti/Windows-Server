@@ -1,0 +1,17 @@
+Habilitando e Criando NIC
+    Gerenciador do Servidor
+        Servidor Local
+            Agrupamento NIC
+                Tarefas 
+                    Nova Equipe
+                        Dar um nome a Equipe   
+                            Selecionar as placas de rede que voce quer no seu NIC Team
+                                Alternar Independente 
+                                    Dinâmico 
+                                        Nenhum (Todos os adaptadores ativos)
+                                            Ok
+                                                Aguardar enquanto as placas se ativam 
+
+
+
+                
