@@ -13,5 +13,151 @@ Habilitando e Criando NIC
                                                 Aguardar enquanto as placas se ativam 
 
 
+Botão direito do mouse em cima do icone de rede
+    Abrir central de rede e compartilhamento 
+        Alterar as configurações do adaptador
+            Botão direito no NICTeam
+                Propriedades 
+                    Protocolo TCP/IP versão 4 (TCP iPv4)
+                        Usar o seguinte endereço IP
+                            Adicionar o IP desejado 
+                                Abrir CMD (Prompt de comando)
+                                    ipconfig para ver se o ip ta certo
+
+
+Mudando o nome do computador 
+    Win+PauseBreak ou Botão direito em meu computador e propriedades
+        Configurações avançadas do sistema 
+            Nome do computador
+                Alterar 
+                    O nome do computador tem que ter SRV antes (Ex:SRVRENAN)
+                        Ok e reinicia o computador 
+                            Abrir CMD e digitar ipconfig /all ou hostname para ver se o nome foi alterado
+
+
+Instalando o AD
+    Gerenciador do Servidor
+        Gerenciar 
+            Adicionar Funções e recursos 
+                Proximo  
+                    Instalação baseado em função ou recurso
+                        Proximo
+                            Selecionar o seu Servidor 
+                                Proximo 
+                                    Serviço de dominio Active Directory
+                                        Adicionar Recursos
+                                            Proximo
+                                                Proximo
+                                                    Proximo
+                                                        Instalar
+
+                                                        
+Configurando o AD
+    Notificações 
+        Promover este servidor a um controlador de dominio
+            Adicionar uma nova floresta
+                Nome do dominio "qualquercoisa.local"
+                    Proximo
+                        Nivel funcional da floresta, selecionar pela versão mais velha, se tiver versão moderna como 2012 R2 pra frente, selecionar 2012 R2 pra frente
+                            Servidor do sistema de nomes do dominio
+                                Adicionar uma senha qualquer
+                                    Proximo
+                                        Proximo
+                                            Nome NETBIOS é o nome do seu dominio, se o seu dominio se chama "renan.local" seu NETBIOS é "renan"
+                                                Proximo
+                                                    Selecionar a pasta onde vao ficar o banco de dados e o log
+                                                        Proximo
+                                                            Proximo
+                                                                Instalar
+
+                                                                
+Instalar o DHCP 
+    Gerenciador do Servidor
+        Gerenciar 
+            Adicionar Funções e recursos 
+                Proximo  
+                    Instalação baseado em função ou recurso
+                        Proximo
+                            Selecionar o seu Servidor 
+                                Proximo 
+                                    Serviço DHCP
+                                        Adicionar Recursos
+                                            Proximo
+                                                Proximo
+                                                    Proximo
+                                                        Instalar
+
+
+Autorizando o DHCP
+    Notificações 
+        Configuração de DHCP    
+            Proximo
+                Usar as seguintes cresenciais do usuario 
+                    Confirmar
+                        Fechar                          
+
+                    
+Configurando o DHCP
+    Ferramentas
+        DHCP
+            servidorrenan.local
+                iPv4
+                    Botao direito em iPv4
+                        Novo escopo
+                            Avançar
+                                Adicionar qualquer nome e descrição
+                                    Avançar
+                                        Adicionar o Ip inicial, final e mascara desejado
+                                            Avançar
+                                                Avançar
+                                                    Selecionar por quanto tempo voce quer manter o ip que voce recebe até receber outro
+                                                        Avançar
+                                                            Sim
+                                                                Avançar
+                                                                    Adicionar Gateway desejado
+                                                                        Avançar
+                                                                            Avançar
+                                                                                Servidor WINS em Windows 95,98
+                                                                                    Avançar
+                                                                                        Sim
+                                                                                            Avançar
+                                                                                                Concluir 
+
+                                                                                                
+Testando se o DHCP esta funcionando
+    Ligar um computador da estação de trabalho
+        Permitir o ip automatico que voce recebe
+            Abrir o CMD
+                ipconfig /all
 
                 
+Criando um usuario pelo AD
+    Ferramentas
+        Usuarios e computadores do Active Directory
+            renan.local
+                users
+                    Botao direito, Novo
+                        Usuario
+                            Adicionar Informações do usuario
+                                Tirar a opção o usuario deve alterar a senha no proximo logon
+
+        
+nslookup renan.local ou ping renan.local para saber se a estação esta comunicando com o DNS
+ping (ip do servidor) para saber se pinga o servidor
+
+
+Colocar a estação no dominio
+    Win+PauseBreak 
+        Renomear este computador
+            Alterar
+                Membro de dominio  
+                    renan.local
+                        Adicionar usuario e senha do servidor
+                            
+                          
+
+
+
+            
+        
+                    
