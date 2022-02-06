@@ -1,0 +1,65 @@
+Criar máquina virtual 
+    Windows 2012 (64-bit)
+        2048MB
+            Criar um novo disco rigido virtual agora 
+                VDI
+                    Tamanho Fixo 
+                        20GB
+
+
+Configuração máquina virtual
+    Sistema 
+        Adicionar mais um nucleo de processador 
+            Rede 
+                Adaptador 1, Conectado a Rede interna
+                    Adaptador 2, Conectado a Rede interna 
+                        Adaptador 3, Conectado a Rede interna
+
+
+Ao iniciar a máquina virtual
+    Dispositivos 
+        Discos Ópticos 
+            Escolher uma imagem de disco 
+                Selecionar a ISO do windows server
+                    Maquina 
+                        Reinicializar 
+
+    
+Instalação Windows Server 
+    Se seu teclador tiver "ç", usar ABNT2, se não tiver Estados Unidos internacional
+        Avançar
+            Instalar agora
+                Chave Windows = W3GGN - FT8W3 - Y4M27 - J84CP - Q3VJ9
+                    Avançar
+                        GUI (Interface Gráfica do Usuário)
+                            Avançar 
+                                Aceitar os termos de licença 
+                                    Avançar 
+                                        Personalizada
+                                            Avançar 
+                                                Selecionar o HD para instalação
+                                                    Avançar
+                                                        Aguardar enquanto faz a instalação do Windows Server
+
+
+Configurações 
+    A senha de ADM deve conter Letras Maiúsculas, Letras Minúsculas, Números e caráter Especial (! @#$%^), dessas 4 opções, precisa de 3
+
+
+Acesso ao Windows Server
+    Para dar CTRL+ALT+DEL na VM, CTRL da direita+DEL
+
+
+Instalação de drivers 
+    Dispositivos 
+        Inserir imagem do adicional convidado 
+            Explorer (Meu computador)
+                Unidade de CD
+                    VBoxWindowsAdditions 
+                        Next 
+                            Next
+                                Install
+                                    Sempre confiar em software da "Oracle Corporation"
+                                        Instalar 
+                                            Reboot now 
+                
